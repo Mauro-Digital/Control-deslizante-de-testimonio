@@ -1,0 +1,173 @@
+:root{
+    --Darkblue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'inter';
+    src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf)
+}
+
+body{
+    font-family: 'inter';
+}
+
+.image-container{    
+    width: 327px;
+    height: 308px;
+    background-image: url(./images/pattern-bg.svg);
+    background-size: contain;
+    text-align: center;
+    padding-top: 28px;
+    margin: 24px auto 0;
+    position: relative;
+    & .image{
+        width: 80%;
+        border-radius: 4px;
+    }
+
+    & .arrows-container{        
+        background-color: white;
+        width: 80px;
+        height: 40px;
+        border-radius: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        box-shadow: 1px 1px 5px;
+        & .arrow{
+            cursor: pointer;
+        }
+    }    
+}
+
+.text-container{    
+    margin-top: 25px;
+    padding-top: 37px;
+    position: relative;
+    & .quotes{
+        width: 60px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 0 auto;
+    }
+    & .user-testimonial{        
+        width: 311px;
+        margin: 0 auto 19px;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: var(--Darkblue);
+        font-weight: 300;
+    }
+    .user-details{
+        & .user-name, .user-degree{          
+            font-size: .9375rem;
+            text-align: center;
+        }
+        & .user-name{
+            color: var(--Darkblue);
+        }
+        & .user-degree{
+            color: var(--Grayish-Blue);
+        }
+    }
+}
+
+footer{    
+    height: 72px;
+    width: 285px;
+    background-image: url(./images/pattern-curve.svg);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (min-width: 768px){
+    .image-container{       
+        width: 552px;
+        height: 515px;
+        padding-top: 44px;
+        & .arrows-container{
+            width: 112px;
+            height: 56px;
+            padding: 0 24px;
+        }
+    }
+
+    .text-container{ 
+        & .user-testimonial{
+            font-size: 1.6rem;
+            line-height: 2.0rem;
+            width: 450px;
+        }
+        & .user-details{
+            & .user-name, .user-degree{
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    footer{
+        position: relative;
+        width: 610px;
+        height: 151px;
+    }
+}
+
+@media (min-width: 1024px){
+    .testimonial{        
+        width: 1297px;
+        height: 665px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 50px auto 0;
+        position: relative;
+    }
+    .image-container{        
+        margin: 0;
+        width: 702px;
+        height: 100%;
+        padding-top: 62px; 
+        & .arrows-container{
+            margin: unset;
+            left: 140px;
+        }
+    }
+    .text-container{        
+        width: 635px;
+        height: 354px;
+        position: absolute;
+        left: 90px;
+        top: 130px;
+        & .quotes{            
+            width: 120px;
+            margin: unset;
+            left: 86px;
+        }
+        & .user-testimonial{            
+            text-align: left;
+            width: 100%;
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+        & .user-details{            
+            display: flex;
+            gap: 10px;
+        }
+    }    
+}
