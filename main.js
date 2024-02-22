@@ -15,7 +15,7 @@ const users = [
     },
     {
         name: 'John Tarkpor',
-        imageUrl: './images/image-John.jpg',
+        imageUrl: './images/image-john.jpg',
         testimonial: '“I’m now in the job of my dreams and so excited about the future.”',
         degree: 'Junior Front-end Developer'
     },
